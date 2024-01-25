@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Prevent scrolling */
+  position: relative;
+}
+
+.App-header {
+  background-color: white;
+  z-index: 1;
+  color: black;
+  /* Adjust the height of the header if necessary */
+  height: 10vh; /* Example height, adjust as needed */
+}
+
+.Charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* This will distribute space around the items evenly */
+  align-items: flex-start;
+  flex-grow: 1;
+  padding: 1rem; 
+  overflow: hidden;
+  height: 90vh; 
+}
+
+.Chart {
+  display: flex; /* Add this to make the flex-direction property work */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items on the cross axis */
+  flex-basis: calc(50% - 2rem); /* Adjust this value to account for the increased margin */
+  margin: 1rem;
+  max-width: 500px; /* You might need to adjust this if charts are still not fitting well */
+  text-align: center; 
+}
+
+.Chart h2 {
+  margin-bottom: 0.5rem; 
+}
+
+.Chart_Age {
+  height: 300px; /* Increase the height as desired */
+  width: 100%; /* This will make the chart expand to the width of its container */
+  max-width: 400px; /* You might need to adjust this if charts are still not fitting well */
+}
+
+.DropDown {
+  position: absolute; /* This positions the dropdown out of the normal flow */
+  top: 0%; /* Adjust this as needed to position vertically */
+  right: 5%; /* Positions 5% from the right edge of the .App container */
+  z-index: 2; /* Ensure it's above other content; adjust as needed */
+  /* Add any specific styles you want for the dropdown */
+  background-color: white; /* Example: set a background color */
+  padding: 10px; /* Example: add some padding */
+}
+
+.Button {
+  position: absolute;
+  top: 0%;
+  left: 5%;
+  z-index: 2;
+  background-color: white;
+  padding: 10px;
+}
+
+.DataTable {  
+  max-height: 500px; /* Adjust the height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #ddd; /* Optional: adds a border around the table */
+}
+
+table {
+  width: 100%; /* Ensures the table fills the container */
+  border-collapse: collapse; /* Optional: for styling */
+}
+
+th, td {
+  text-align: left; /* Optional: aligns text to the left */
+  padding: 8px; /* Optional: adds padding inside cells */
+  border: 1px solid #ddd; /* Optional: adds a border to cells */
+}
