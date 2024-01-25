@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./BackEnd/
+      dockerfile: DockerFile
+    ports:
+      - "5000:5000"
+    environment:
+      DB_HOST: cloudcomputing-workspace.845799280017.eu-west-1.redshift-serverless.amazonaws.com
+      DB_NAME: dev
+      DB_USER: cloud
+      DB_PASSWORD: Cloud-Computing23
+      DB_PORT: 5439
+
+  frontend:
+    build:
+      context: ./FrontEnd/dashboard
+      dockerfile: DockerFile
+    ports:
+      - "80:80"
